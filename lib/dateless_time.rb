@@ -135,7 +135,7 @@ private
     case source
     when Time, DateTime, DatelessTime then init_with_time(source)
     when String then init_with_string(source)
-    when Fixnum then init_with_seconds(source)
+    when Integer then init_with_seconds(source)
     when Hash   then init_with_hash(source)
     when Array  then init_with_array(source)
     else raise DatelessTime::InitializationError, "DatelessTime objects cannot be initialized with instances of #{source.class}."
